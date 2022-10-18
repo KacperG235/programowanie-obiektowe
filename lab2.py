@@ -1,3 +1,46 @@
+def mult(arg, /):
+    iloczyn = 1
+    for x in arg:
+        iloczyn *= x
+    return iloczyn
+
+
+print(mult([3, 5, 7]))
+print(mult(range(2, 8, 2)))
+
+
+def mult_ints(arg, /):
+    iloczyn = 1
+    for x in arg:
+        if isinstance(x, int):
+            iloczyn *= x
+    return iloczyn
+
+
+print(mult_ints([3, 3.14, 5, "abs", 7]))
+
+
+def multiply(*args):
+    iloczyn = 1
+    for x in args:
+        iloczyn *= x
+    return iloczyn
+
+
+print(multiply(3, 5, 7))
+
+
+def multiply_ints(*args):
+    iloczyn = 1
+    for x in args:
+        if isinstance(x, int):
+            iloczyn *= x
+    return iloczyn
+
+
+print(multiply_ints(3, 3.14, 5, "abc", 7))
+
+
 def make_car(firma, model, **kwargs):
     slownik = {}
     temp = {"firma": firma, "model": model}

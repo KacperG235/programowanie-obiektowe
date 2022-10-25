@@ -16,11 +16,7 @@ class Wymierna:
         return self.p / self.q
 
     def __add__(self, other):
-        temp = Wymierna()
-        if self.q == other.q:
-            temp.p = self.p + other.p
-            temp.q = self.q
-            return temp
+        return Wymierna((self.p/self.q) + (other.p/other.q))
 
     def __eq__(self, other):
         if self.p == other.p:

@@ -10,13 +10,13 @@ class Car:
         else:
             self.poziom_paliwa = ile
 
-    def drive(self, ile: float) -> float:
-        liczba = self.wydajnosc * 1000
-        self.poziom_paliwa - liczba/1000
-        return liczba - ile
+    def drive(self, ile: float) -> None:
+        liczba = self.wydajnosc / 1000
+        liczba *= ile
+        self. poziom_paliwa -= liczba
 
     def get_fuel_level(self) -> float:
-        return self.poziom_paliwa
+        return round(self.poziom_paliwa, 2)
 
 
 def main():

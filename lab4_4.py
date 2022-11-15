@@ -5,11 +5,16 @@ class Student:
 
 
 def main():
+    #zad 11
     test = Student()
     print(test.student_id)
     print(test.student_name)
+    setattr(Student, 'student_class', 2)
     print(test.student_id)
     print(test.student_name)
+    print(test.student_class)
+    delattr(Student, 'student_name')
+    print(test.student_id)
     print(test.student_class)
 
 
